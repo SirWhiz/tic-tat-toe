@@ -54,9 +54,14 @@ export class BoardComponent implements OnInit {
         this.squares[a] === this.squares[b] &&
         this.squares[a] === this.squares[c]
       ) {
+        this.blockButtons();
         return this.squares[a];
       }
     }
     return null;
+  }
+
+  blockButtons() {
+    
   }
 }
