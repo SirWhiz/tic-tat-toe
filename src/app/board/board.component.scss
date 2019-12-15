@@ -8,3 +8,43 @@ app-square {
     border: 1px solid gray;
     height: 100px;
 }
+
+.info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info button {
+    height: 50px;
+}
+
+.winner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner-title {
+    display: block;
+}
+
+.board-container {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 800px) {
+    .current-player h1 {
+      font-size: 19px;
+    }
+
+    .winner h2 {
+        font-size: 18px;
+    }
+  }
