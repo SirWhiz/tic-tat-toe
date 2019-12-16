@@ -14,8 +14,11 @@
 </div>
 
 <div class="winner">
-    <h2 *ngIf="winner">
+    <h2 *ngIf="winner && winner=='X' || winner=='O'">
         Player {{ winner }} won the game!
+    </h2>
+    <h2 *ngIf="winner && winner=='T'">
+        Players tied!
     </h2>
 </div>
 

@@ -28,12 +28,14 @@ export class BoardComponent implements OnInit {
   }
 
   makeMove(idx: number) {
-    if(!this.squares[idx]) {
-      this.squares.splice(idx, 1, this.player);
-      this.xIsNext = !this.xIsNext;
+    if(!this.winner){
+      if(!this.squares[idx]) {
+        this.squares.splice(idx, 1, this.player);
+        this.xIsNext = !this.xIsNext;
+      }
+  
+      this.winner = this.calculateWinner();
     }
-
-    this.winner = this.calculateWinner();
   }
 
   calculateWinner() {
@@ -54,14 +56,20 @@ export class BoardComponent implements OnInit {
         this.squares[a] === this.squares[b] &&
         this.squares[a] === this.squares[c]
       ) {
-        this.blockButtons();
         return this.squares[a];
+      }else if (this.playersTied()) {
+        return 'T';
       }
     }
     return null;
   }
 
-  blockButtons() {
-    
+  playersTied() {
+    for(var i = 0; i < this.squares.length; i++) {
+      if(this.squares[i]==null){
+        return false
+      }
+    }
+    return true;
   }
 }
