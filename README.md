@@ -1,9 +1,11 @@
 # Tic Tac Toe Game!
 Web application built using Angular to play Tic-Tac-Toe
 
-## Live demo:
+## Screenshots:
 
-[Click here]() to see a live demo of the project
+![empty-board](screenshots/tictactoe1.png)
+![player-won](screenshots/tictactoe2.png)
+![player-tie](screenshots/tictactoe3.png)
 
 ## Installation
 
@@ -14,9 +16,6 @@ Download the code from the repository, install it with npm by running the follow
 And then just start the local Angular server by typing:
 
 ### `ng serve`
-
-## Screenshots:
-
 
 ## Technology Stack
 This project was built using Angular and Nebular
